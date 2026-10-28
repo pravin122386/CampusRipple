@@ -1,0 +1,72 @@
+CampusRipple — Verification & Walkthrough
+CampusRipple is a campus incident management platform designed with an editorial aesthetic (inspired by Vogue & high-end editorial digital design principles). The core visual concept — "One Report. Wider Impact." — illustrates how a single student report propagates through connected campus infrastructure.
+
+🎨 Visual & Editorial Design System
+Typography: High-contrast editorial serif (Cormorant Garamond / Playfair Display) paired with clean geometric sans (Plus Jakarta Sans) and code telemetry (JetBrains Mono).
+Color Palette: Dark Alabaster (#0F1115), Editorial Card (#161920), Crimson Ripple Accent (#D9383A), Warm Amber (#F59E0B), Emerald Resolved (#10B981), Royal Slate (#3B82F6).
+Layout Philosophy: Hairline borders, magazine-style section index counters (01 // CONCEPT, 02 // IMPACT), generous whitespace, asymmetrical editorial grids, and large visual blocks.
+✨ Features Implemented
+1. Context-Aware Custom Cursor & Magnetics
+Smooth Physics: Interpolated trailing outer ring and central dot.
+Contextual Labels:
+EXPLORE on campus imagery
+IMPACT on incident rows
+TRACE on dependency graph & campus map nodes
+OPEN / VIEW on buttons and nav links
+DRAG on graph canvas
+Magnetic Buttons: Buttons subtly attract the cursor pointer on approach.
+Click Ripple Particles: Spawns expanding ripple rings at click position.
+Accessibility & Mobile: Automatically falls back to standard touch controls on mobile/tablet or when prefers-reduced-motion is active.
+2. Fullscreen Page Ripple Transitions
+Seamless screen overlay ripple transition effect when switching routes or submitting incident telemetry.
+3. Editorial Landing Page (/)
+Hero Section: High-impact campus photograph background, headline "One Report. Wider Impact.", supporting statement, primary CTAs (Report an Incident, Explore Campus Grid), and live incident chain preview.
+8-Stage Progressive Scroll Storytelling:
+01 A student notices a problem
+02 The problem becomes an incident
+03 System discovers related reports
+04 Dependency network reveals affected resources
+05 Affected students identified
+06 Automated notifications dispatched
+07 Technicians resolve the problem
+08 Incident verified and closed.
+4. Student Dashboard (/dashboard)
+Editorial greeting "Good morning, Pravin."
+Telemetry metrics: Active Incidents, My Reports, Affected Users, Resolved Today.
+Compact, horizontal incident rows with hover impact indicators.
+Campus Live visual map widget.
+5. Multi-Step Incident Reporter (/report)
+4-step progressive wizard:
+Step 1: What happened? (Category, title, description, severity selector)
+Step 2: Where did it happen? (Building picker, room/wing input)
+Step 3: What is affected? (Resource toggle grid)
+Step 4: Review & Broadcast (Triggers automated ripple impact engine: "Incident received" → "Checking related reports" → "Potential impact detected").
+6. Incident Explorer (/explorer)
+Multi-filter search (search query, category, building, status, severity dropdowns).
+Compact horizontal rows with IMPACT cursor hover triggers.
+7. Incident Details & Impact Analysis (/incident/:id)
+Editorial cover photo header, metadata pills.
+Tabs:
+Impact Analysis: 78% Impact Level score, 142 Affected Students, 6 Affected Locations, 3 Related Reports. Features Impact Mode toggle to dim unaffected nodes and illuminate propagation paths!
+Overview: Description, location metadata, verified resolution summary.
+Related Reports: Linked duplicate incidents with merge action.
+Resolution Timeline: Sequential tracking log from report dispatch to technician assignment and resolution.
+8. Campus Dependency Map (/map)
+Interactive campus node map with filter tabs (Building, Lab, Library, Hostel, Router).
+Node inspector drawer showing building details and active location incidents.
+9. Admin Ops Center (/admin)
+Control room table for staff/technicians:
+Assign technicians from dropdown list
+Update status workflow (Reported → Investigating → Assigned → In Progress → Resolved → Verified)
+Escalate severity levels and record technical resolution summaries.
+10. Analytics & Data Telemetry (/analytics)
+Editorial report format: Avg resolution time (1.8 hrs), Resolution efficiency (83%), Category distribution chart, Building impact frequency heatmap.
+11. Notifications Center (/notifications)
+Real-time notification feed with severity indicators, unread count badge, mark-all-read action, and quick link to incident details.
+12. User Profile (/profile)
+User account card, history of reported telemetry records, student verification badge.
+13. Java Spring Boot Backend Scaffold (backend/)
+Complete Java Spring Boot project directory containing pom.xml, CampusRippleApplication.java, Entities (Incident, Location, etc.), Enums, and REST IncidentController.java.
+🚀 Verification Results
+Build Check: npm run build executed successfully without TypeScript or bundling errors.
+Dev Server: Vite development server running live at http://localhost:3000/
